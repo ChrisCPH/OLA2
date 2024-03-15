@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="{{ url_for('predict')}}" method="post">
+        <p>How many bedrooms does the house have?</p>
+            <input type="number" name="bedrooms" placeholder="Enter your the amount" required="required" /><br> 
+        <p>How big is the area?</p>
+            <input type="number" name="area" placeholder="Enter your the amount" required="required" /><br>
+        <p>How many bathrooms does the house have?</p>
+            <input type="number" name="bathrooms" placeholder="Enter your the amount" required="required" /><br> 
+        <p>How many stories?</p>
+            <input type="number" name="stories" placeholder="Enter your the amount" required="required" /><br>
+        <p>How many parking spaces does the house have?</p>
+            <input type="number" name="parking" placeholder="Enter your the amount" required="required" /><br>
+        <p>Is the house accesible from a main road?</p>
+            <label><input type="radio" name="mainroad" value="1" required="required" />Yes</label>
+            <label><input type="radio" name="mainroad" value="0" required="required" />No</label><br>
+            </select>
+        <p>Does the house have a guest room?</p>
+            <label><input type="radio" name="guestroom" value="1" required="required" />Yes</label>
+            <label><input type="radio" name="guestroom" value="0" required="required" />No</label><br>
+        <p>Does the house have a basement?</p>
+            <label><input type="radio" name="basement" value="1" required="required" />Yes</label>
+            <label><input type="radio" name="basement" value="0" required="required" />No</label><br>
+        <p>Does the house have hotwater heating</p>
+            <label><input type="radio" name="hotwaterheating" value="1" required="required" />Yes</label>
+            <label><input type="radio" name="hotwaterheating" value="0" required="required" />No</label><br>
+        <p>Does the house have airconditioning?</p>
+            <label><input type="radio" name="airconditioning" value="1" required="required" />Yes</label>
+            <label><input type="radio" name="airconditioning" value="0" required="required" />No</label><br>
+        <p>Is the house in a preferred area?</p>
+            <label><input type="radio" name="prefarea" value="1" required="required" />Yes</label>
+            <label><input type="radio" name="prefarea" value="0" required="required" />No</label><br>
+        <p>Furnishing status?</p>
+            <label><input type="radio" name="furnishingstatus" value="2" required="required" />Furnished</label><br>
+            <label><input type="radio" name="furnishingstatus" value="1" required="required" />Semi-furnished</label><br>
+            <label><input type="radio" name="furnishingstatus" value="0" required="required" />Unfurnished</label><br>
+
+            <button type="submit">Predict</button>
+    </form>
+    <p> {{ prediction }} </p>
+</body>
+</html>
