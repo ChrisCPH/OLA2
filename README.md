@@ -6,4 +6,4 @@ All code for the model found in OLA2.ipynb
 
 Presentation found in Measuring_distance_between_datapoints.pdf
 
-In the App folder is the web app create using flask
+In the App folder is the web app created using flask and pickle to save the model
